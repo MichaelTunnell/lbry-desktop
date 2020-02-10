@@ -1,14 +1,13 @@
 // @flow
 import * as PAGES from 'constants/pages';
 import * as ICONS from 'constants/icons';
+import { SORT_NEW } from 'constants/claim_search';
 import React from 'react';
 import ClaimListDiscover from 'component/claimListDiscover';
 import ClaimList from 'component/claimList';
 import Page from 'component/page';
 import Button from 'component/button';
 import Icon from 'component/common/icon';
-
-import { TYPE_NEW } from 'component/claimListDiscover/view';
 
 type Props = {
   email: string,
@@ -50,7 +49,7 @@ function ChannelsFollowing(props: Props) {
               {__('Following')}
             </span>
           }
-          defaultTypeSort={TYPE_NEW}
+          defaultTypeSort={SORT_NEW}
           channelIds={subscribedChannels.map(sub => sub.uri.split('#')[1])}
           meta={
             <Button

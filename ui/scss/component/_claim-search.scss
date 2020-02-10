@@ -1,0 +1,29 @@
+.claim-search__wrapper {
+  width: 100%;
+}
+
+.claim-search__menus {
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-medium);
+  padding-bottom: var(--spacing-small);
+}
+
+.claim-search__dropdown {
+  padding: 0 var(--spacing-medium);
+  max-width: 400px;
+  @media (max-width: $breakpoint-small) {
+    margin-left: 0;
+  }
+  background-color: var(--color-card-background);
+}
+
+.claim-search__input-container {
+  &:not(:first-of-type) {
+    padding-left: var(--spacing-medium);
+  }
+}
